@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+
+:root {
+  --prim-c: rgba(255, 255, 255, 0.8);
+  --sec-c: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  color: var(--prim-c);
+  font-family: "Space Grotesk", sans-serif;
+}
+/* Utility class */
+/* Hover class with hover effects */
+.hover:hover{
+  cursor: pointer;
+  color: var(--prim-c);
+  transition: 0.3s ease;
+}
+
+/* A class called box-shadow, that has hover effects */
+.box-shadow:hover{
+  z-index: 6;
+  box-shadow: 0 0 35px 2px #ffff;
+  transition: 0.3s ease;
+}
+
+/* The container after the body */
+.main-container{
+  width: 100%;
+  height: 100vh;
+  background-image: url("img/pexels-egor-kamelev-920157.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 500px 100px #111;
+}
+
+/* Nav */
+#nav{
+  position: relative;
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav #logo{
+  height: 70px;
+  width: 60px;
+}
+
+label{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 1.8ram;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px #333;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+label:hover{
+  color: antiquewhite;
+}
+
+.btn{
+  border: 2px solid var(--sec-c);
+  color: var(--sec-c);
+  outline: none;
+  transition: 0.3 ease;
+  border-radius: 25px;
+}
+.btn:hover{
+  border: 2px solid var(--prim-c);
+  transform: translate(0, -5px);
+}
+
+.btn:active{
+  transform: scale(1.5);
+  transition: 0.3 ease;
+}
+
+#Header{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  color: #fff;
+  flex-direction: column;
+}
+
+h1{
+  font-size: 5rem;
+  margin: 3rem 0;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #333;
+}
+
+@keyframes plus{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
+
+.btn-puls{
+  animation: plus 3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+  width: 100%;
+}
+
+/* stop the animation */
+.btn-puls:hover{
+  animation: none;
+}
+
+#Social{
+  position: fixed;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width:  10vw;
+  height: 80vh;
+  border-radius: 0 10px 10px 0;
+}
+
+#Social:hover{
+  border: 1px solid #333;
+}
+
+.social-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  margin: 1rem;
+}
+
+.fab{
+  color: var(--sec-c);
+  transition: 0.3s ease;
+}
+
+#Contact{
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width:  10vw;
+  height: 80vh;
+  border-radius: 10px 0 0 10px;
+  transition: 0.3s ease;
+}
+
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  margin: 1rem;
+}
+
+.fas{
+  color: var(--sec-c);
+  transition: 0.3s ease;
+}
+
+#Footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#Bubbles{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+}
+
+#Bubbles img{
+  width: 85px;
+  height: 100px;
+  opacity: 0.3;
+  animation: bubble 7s linear infinite;
+}
+
+@keyframes bubble{
+  0%{
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-80vh);
+    opacity: 1;
+  }
+}
+
+
+#Bubbles img:nth-child(1){
+  animation-delay: 2s;
+  width: 20px;
+  height: 25px;
+}
+#Bubbles img:nth-child(2){
+  animation-delay: 1s;
+  width: 40px;
+  height: 45px;
+}
+#Bubbles img:nth-child(3){
+  animation-delay: 3s;
+  /* width: 20px;
+  height: 25px; */
+}
+#Bubbles img:nth-child(4){
+  animation-delay: 2s;
+  width: 30px;
+  height: 35px;
+}
+#Bubbles img:nth-child(5){
+  animation-delay: 8s;
+  width: 50px;
+  height: 55px;
+}
+#Bubbles img:nth-child(){
+  animation-delay: 2s;
+  width: 30px;
+  height: 35px;
+}
+#Bubbles img:nth-child(7){
+  animation-delay: 5s;
+  width: 50px;
+  height: 55px;
+}
+#Bubbles img:nth-child(8){
+  animation-delay: 4s;
+  width: 20px;
+  height: 25px;
+}
